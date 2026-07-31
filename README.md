@@ -2,6 +2,13 @@
 
 A scalable Node.js backend application for processing large CSV files containing order data. The system supports streaming CSV processing, batch database inserts, logical sharding, and Google Cloud Storage (GCS) integration to efficiently handle large datasets while maintaining data integrity.
 
+## Storage Strategy: 
+The application supports both **Google Cloud Storage (GCS)** and **Local Storage** for uploaded CSV files. The storage backend is configurable through environment variables. While Google Cloud Storage is the primary storage option for production and assessment, Local Storage is provided to simplify local development and testing without requiring cloud credentials.
+
+- **Google Cloud Storage** is intended for production and assessment use.
+- **Local Storage** is available for development and testing.
+- The storage backend can be switched through environment configuration without changing the CSV processing logic.
+
 ## Features
 
 - CSV file upload using Multer
@@ -16,6 +23,27 @@ A scalable Node.js backend application for processing large CSV files containing
 - Invalid record logging
 - Centralized error handling
 - RESTful API architecture
+
+
+
+## Screenshots
+### Successful CSV Upload
+
+Shows the API successfully processing a CSV file and returning the processing summary.
+
+![Successful Upload](.\screenshots\successful-upload.png)
+
+### PostgreSQL Records
+
+Demonstrates that valid records are inserted into PostgreSQL with logical shard information.
+
+![PostgreSQL](.\screenshots\postgres-orders.png)
+
+### Google Cloud Storage
+
+Shows the uploaded CSV file stored in the configured Google Cloud Storage bucket.
+
+![GCS Bucket](.\screenshots\gcs-bucket.png)
 
 ## Tech Stack
 
