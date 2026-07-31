@@ -31,19 +31,19 @@ The application supports both **Google Cloud Storage (GCS)** and **Local Storage
 
 Shows the API successfully processing a CSV file and returning the processing summary.
 
-![Successful Upload](.\screenshots\successful-upload.png)
+![Successful Upload](./screenshots/successful-upload.png)
 
 ### PostgreSQL Records
 
 Demonstrates that valid records are inserted into PostgreSQL with logical shard information.
 
-![PostgreSQL](.\screenshots\postgres-orders.png)
+![PostgreSQL](./screenshots/postgres-orders.png)
 
 ### Google Cloud Storage
 
 Shows the uploaded CSV file stored in the configured Google Cloud Storage bucket.
 
-![GCS Bucket](.\screenshots\gcs-bucket.png)
+![GCS Bucket](./screenshots/gcs-bucket.png)
 
 ## Tech Stack
 
